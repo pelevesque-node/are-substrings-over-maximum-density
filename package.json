@@ -1,0 +1,42 @@
+{
+  "name": "@pelevesque/are-substrings-over-maximum-density",
+  "version": "0.0.1",
+  "description": "Checks if substrings are over maximum densities in a string.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=7.5.0"
+  },
+  "scripts": {
+    "test": "standard && mocha --reporter spec",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pelevesque/are-substrings-over-maximum-density.git"
+  },
+  "keywords": [
+    "str",
+    "substring",
+    "maximum",
+    "density"
+  ],
+  "author": "Pierre-Emmanuel Lévesque <pierre.e.levesque@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pelevesque/are-substrings-over-maximum-density/issues"
+  },
+  "homepage": "https://github.com/pelevesque/are-substrings-over-maximum-density#readme",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.4",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.1.4",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "substr-occurrence": "^1.1.0"
+  }
+}
