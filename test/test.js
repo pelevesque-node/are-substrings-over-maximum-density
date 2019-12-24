@@ -16,7 +16,7 @@ describe('#areSubstringsOverMaximumDensity()', () => {
 
     it('should return false with a check with maximum === 0', () => {
       const str = ''
-      const checks = { 'a': 0 }
+      const checks = { a: 0 }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false
       expect(result).to.equal(expected)
@@ -24,7 +24,7 @@ describe('#areSubstringsOverMaximumDensity()', () => {
 
     it('should return false with a check with maximum === 1', () => {
       const str = ''
-      const checks = { 'a': 1 }
+      const checks = { a: 1 }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false
       expect(result).to.equal(expected)
@@ -34,7 +34,7 @@ describe('#areSubstringsOverMaximumDensity()', () => {
   describe('single character substring', () => {
     it('should return true when over maximum', () => {
       const str = 'aaaabbbb'
-      const checks = { 'a': 0.25 }
+      const checks = { a: 0.25 }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = true
       expect(result).to.equal(expected)
@@ -42,7 +42,7 @@ describe('#areSubstringsOverMaximumDensity()', () => {
 
     it('should return false when equal to maximum', () => {
       const str = 'aaaabbbb'
-      const checks = { 'a': 0.5 }
+      const checks = { a: 0.5 }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false
       expect(result).to.equal(expected)
@@ -50,7 +50,7 @@ describe('#areSubstringsOverMaximumDensity()', () => {
 
     it('should return false when under maximum', () => {
       const str = 'aaaabbbb'
-      const checks = { 'a': 1 }
+      const checks = { a: 1 }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false
       expect(result).to.equal(expected)
@@ -60,7 +60,7 @@ describe('#areSubstringsOverMaximumDensity()', () => {
   describe('multi character substring', () => {
     it('should return true when over maximum', () => {
       const str = 'aaaabbbb'
-      const checks = { 'aaaa': 0.25 }
+      const checks = { aaaa: 0.25 }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = true
       expect(result).to.equal(expected)
@@ -68,7 +68,7 @@ describe('#areSubstringsOverMaximumDensity()', () => {
 
     it('should return false when equal to maximum', () => {
       const str = 'aaaabbbb'
-      const checks = { 'aaaa': 0.5 }
+      const checks = { aaaa: 0.5 }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false
       expect(result).to.equal(expected)
@@ -76,7 +76,7 @@ describe('#areSubstringsOverMaximumDensity()', () => {
 
     it('should return false when under maximum', () => {
       const str = 'aaaabbbb'
-      const checks = { 'aaaa': 1 }
+      const checks = { aaaa: 1 }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false
       expect(result).to.equal(expected)
@@ -87,9 +87,9 @@ describe('#areSubstringsOverMaximumDensity()', () => {
     it('should return true with many over maximum', () => {
       const str = 'aaaabbbbccccdddd'
       const checks = {
-        'a': 0.1,
-        'b': 0.1,
-        'c': 0.1
+        a: 0.1,
+        b: 0.1,
+        c: 0.1
       }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = true
@@ -99,9 +99,9 @@ describe('#areSubstringsOverMaximumDensity()', () => {
     it('should return true with some over maximum', () => {
       const str = 'aaaabbbbccccdddd'
       const checks = {
-        'a': 0.1,
-        'b': 1,
-        'c': 0.1
+        a: 0.1,
+        b: 1,
+        c: 0.1
       }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = true
@@ -111,10 +111,10 @@ describe('#areSubstringsOverMaximumDensity()', () => {
     it('should return false with many equal to maximum', () => {
       const str = 'aaaabbbbccccdddd'
       const checks = {
-        'a': 0.25,
-        'b': 0.25,
-        'c': 0.25,
-        'd': 0.25
+        a: 0.25,
+        b: 0.25,
+        c: 0.25,
+        d: 0.25
       }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false
@@ -124,10 +124,10 @@ describe('#areSubstringsOverMaximumDensity()', () => {
     it('should return false with many under maximum', () => {
       const str = 'aaaabbbbccccdddd'
       const checks = {
-        'a': 0.5,
-        'b': 0.5,
-        'c': 0.5,
-        'd': 0.5
+        a: 0.5,
+        b: 0.5,
+        c: 0.5,
+        d: 0.5
       }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false
@@ -139,9 +139,9 @@ describe('#areSubstringsOverMaximumDensity()', () => {
     it('should return true with many over maximum', () => {
       const str = 'aaaabbbbccccdddd'
       const checks = {
-        'aaaa': 0.1,
-        'bbbb': 0.1,
-        'cccc': 0.1
+        aaaa: 0.1,
+        bbbb: 0.1,
+        cccc: 0.1
       }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = true
@@ -151,9 +151,9 @@ describe('#areSubstringsOverMaximumDensity()', () => {
     it('should return true with some over maximum', () => {
       const str = 'aaaabbbbccccdddd'
       const checks = {
-        'aaaa': 0.1,
-        'bbbb': 1,
-        'cccc': 0.1
+        aaaa: 0.1,
+        bbbb: 1,
+        cccc: 0.1
       }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = true
@@ -163,10 +163,10 @@ describe('#areSubstringsOverMaximumDensity()', () => {
     it('should return false with many equal to maximum', () => {
       const str = 'aaaabbbbccccdddd'
       const checks = {
-        'aaaa': 0.25,
-        'bbbb': 0.25,
-        'cccc': 0.25,
-        'dddd': 0.25
+        aaaa: 0.25,
+        bbbb: 0.25,
+        cccc: 0.25,
+        dddd: 0.25
       }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false
@@ -176,10 +176,10 @@ describe('#areSubstringsOverMaximumDensity()', () => {
     it('should return false with many under maximum', () => {
       const str = 'aaaabbbbccccdddd'
       const checks = {
-        'aaaa': 0.5,
-        'bbbb': 0.5,
-        'cccc': 0.5,
-        'dddd': 0.5
+        aaaa: 0.5,
+        bbbb: 0.5,
+        cccc: 0.5,
+        dddd: 0.5
       }
       const result = areSubstringsOverMaximumDensity(str, checks)
       const expected = false

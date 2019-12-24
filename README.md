@@ -44,7 +44,7 @@ const areSubstringsOverMaximumDensity = require('@pelevesque/are-substrings-over
 // over density returns true
 // 'a' takes up 50% of the string, more than a 25% density
 const str = 'aaaabbbb'
-const checks = { 'a': 0.25 }
+const checks = { a: 0.25 }
 const result = areSubstringsOverMaximumDensity(str, checks)
 // result === true
 ```
@@ -52,7 +52,7 @@ const result = areSubstringsOverMaximumDensity(str, checks)
 ```js
 // equal to density returns false
 const str = 'aaaabbbb'
-const checks = { 'a': 0.5 }
+const checks = { a: 0.5 }
 const result = areSubstringsOverMaximumDensity(str, checks)
 // result === false
 ```
@@ -60,7 +60,7 @@ const result = areSubstringsOverMaximumDensity(str, checks)
 ```js
 // under density returns false
 const str = 'a man, a hog, and a fly'
-const checks = { 'hog': 0.5 }
+const checks = { hog: 0.5 }
 const result = areSubstringsOverMaximumDensity(str, checks)
 // result === false
 ```
@@ -70,7 +70,7 @@ const result = areSubstringsOverMaximumDensity(str, checks)
 ```js
 // when one is over density, it returns true ('a' is over 25%)
 const str = 'aaaabbbb'
-const checks = { 'a': 0.25, 'b': 0.5, 'c': 0.3 }
+const checks = { a: 0.25, b: 0.5, c: 0.3 }
 const result = areSubstringsOverMaximumDensity(str, checks)
 // result === true
 ```
@@ -78,7 +78,7 @@ const result = areSubstringsOverMaximumDensity(str, checks)
 ```js
 // when all are under or equal to density, it returns false
 const str = 'a man, a hog, and a fly'
-const checks = { 'a': 0.5, 'hog': 0.5, 'c': 0.3 }
+const checks = { a: 0.5, hog: 0.5, c: 0.3 }
 const result = areSubstringsOverMaximumDensity(str, checks)
 // result === false
 ```
